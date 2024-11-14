@@ -15,7 +15,7 @@ require_once 'paginas/PanelProceso.php';
 <div class="top-bar">
     <div class="logo">Bienestar el Salud</div>
     <nav>
-        <a href="panel.php">Panel de Control</a>
+        <a href="RegistrarUsuario.php">Registro usuarios</a>
         <a href="RegistrarAdmin.php">Registrar Admin</a>
         <a href="Conexion/logut.php">Cerrar Sesión</a>
     </nav>
