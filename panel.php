@@ -45,7 +45,7 @@ require_once 'paginas/PanelProceso.php';
                     <td><?php echo htmlspecialchars($row['CedulaProf']); ?></td>
                     <td><?php echo htmlspecialchars($row['Maestría']); ?></td>
                     <td>
-                        <a href="actualizar.php?id=<?php echo $row['id']; ?>" class="btn btn-update">Actualizar</a>
+                        <a href="paginas/Actualizar.php?id=<?php echo $row['id']; ?>" class="btn btn-update">Actualizar</a>
                         <a href="eliminar.php?id=<?php echo $row['id']; ?>" class="btn btn-delete" onclick="return confirm('¿Estás seguro de que deseas eliminar este registro?');">Eliminar</a>
                     </td>
                 </tr>
