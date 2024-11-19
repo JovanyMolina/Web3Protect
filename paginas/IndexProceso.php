@@ -5,8 +5,8 @@ require_once '../Conexion/ConnecionMySql.php';
 $conn = new ConnectionMySQL();
 $conn->CreateConnection();
 
-$usuario = $_POST['usuario'];
-$contrasena = $_POST['contrasena'];
+$usuario = filter_var($_POST['usuario'], FILTER_SANITIZE_STRING);
+$contrasena = filter_var($_POST['contrasena'], FILTER_SANITIZE_STRING);
 
 $usuario = $conn->EscapeString($usuario);
 
