@@ -1,4 +1,5 @@
 <?php 
+require_once '../Conexion/auth2.php';
 require_once '../Conexion/ConnecionMySql.php';
 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {

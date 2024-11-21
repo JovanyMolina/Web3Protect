@@ -1,4 +1,5 @@
 <?php 
+require_once '../Conexion/auth2.php';
 require_once '../Conexion/ConnecionMySql.php';
 
 $conn = new ConnectionMySQL();

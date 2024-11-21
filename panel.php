@@ -1,4 +1,5 @@
 <?php
+require_once 'Conexion/auth.php';
 require_once 'paginas/PanelProceso.php';
 ?>
 
