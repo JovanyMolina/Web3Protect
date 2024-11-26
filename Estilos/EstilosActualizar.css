@@ -20,7 +20,8 @@ form {
     padding: 20px 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    width: 400px;
+    width: 100%;  /* Cambiar el ancho a 100% para que sea flexible */
+    max-width: 400px;  /* Máximo ancho de 400px */
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -93,4 +94,61 @@ form button:hover {
 
 form button:active {
     transform: translateY(1px);
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .titulo h2 {
+        font-size: 20px;
+    }
+
+    .titulo i {
+        font-size: 24px;
+    }
+
+    form {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    form label {
+        font-size: 12px;
+    }
+
+    form input[type="text"] {
+        font-size: 12px;
+    }
+
+    form button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo h2 {
+        font-size: 18px;
+    }
+
+    .titulo i {
+        font-size: 22px;
+    }
+
+    form {
+        width: 95%;
+        max-width: 300px;
+    }
+
+    form label {
+        font-size: 12px;
+    }
+
+    form input[type="text"] {
+        font-size: 12px;
+    }
+
+    form button {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
 }

@@ -34,19 +34,31 @@ if ($result && mysqli_num_rows($result) > 0) {
         <input type="hidden" name="id" value="<?php echo isset($row['id']) ? htmlspecialchars($row['id']) : ''; ?>">
 
         <label for="Nombre">Nombre:</label>
-        <input type="text" id="Nombre" name="Nombre" value="<?php echo isset($row['Nombre']) ? htmlspecialchars($row['Nombre']) : ''; ?>" required>
+        <input type="text" id="Nombre" name="Nombre" value="<?php echo isset($row['Nombre']) ? htmlspecialchars($row['Nombre']) : ''; ?>" required minlength="2"
+                maxlength="50"
+                pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+"
+                title="Solo se permiten letras y espacios.">
 
         <label for="Apellidos">Apellidos:</label>
-        <input type="text" id="Apellidos" name="Apellidos" value="<?php echo isset($row['Apellidos']) ? htmlspecialchars($row['Apellidos']) : ''; ?>" required>
+        <input type="text" id="Apellidos" name="Apellidos" value="<?php echo isset($row['Apellidos']) ? htmlspecialchars($row['Apellidos']) : ''; ?>" required minlength="2"
+                maxlength="50"
+                pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+"
+                title="Solo se permiten letras y espacios.">
 
         <label for="Telefono">Teléfono:</label>
-        <input type="text" id="Telefono" name="Telefono" value="<?php echo isset($row['Telefono']) ? htmlspecialchars($row['Telefono']) : ''; ?>" required>
+        <input type="text" id="Telefono" name="Telefono" value="<?php echo isset($row['Telefono']) ? htmlspecialchars($row['Telefono']) : ''; ?>" required pattern="[0-9]{10}"
+                maxlength="10"
+                title="Debe contener exactamente 10 números.">
 
         <label for="CedulaProf">Cédula Profesional:</label>
-        <input type="text" id="CedulaProf" name="CedulaProf" value="<?php echo isset($row['CedulaProf']) ? htmlspecialchars($row['CedulaProf']) : ''; ?>" required>
+        <input type="text" id="CedulaProf" name="CedulaProf" value="<?php echo isset($row['CedulaProf']) ? htmlspecialchars($row['CedulaProf']) : ''; ?>" required maxlength="10"
+                pattern="[0-9]{7,10}"
+                title="Debe contener entre 7 y 10 dígitos numéricos.">
 
         <label for="Maestria">Maestría:</label>
-        <input type="text" id="Maestria" name="Maestría" value="<?php echo isset($row['Maestría']) ? htmlspecialchars($row['Maestría']) : ''; ?>" required>
+        <input type="text" id="Maestria" name="Maestría" value="<?php echo isset($row['Maestría']) ? htmlspecialchars($row['Maestría']) : ''; ?>" required minlength="3"
+                maxlength="50"
+                title="Ingrese un nombre válido de maestría.">
 
         <button type="submit">Actualizar</button>
     </form>

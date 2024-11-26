@@ -1,6 +1,8 @@
 <?php
 require_once 'Conexion/auth.php';
 require_once 'paginas/PanelProceso.php';
+
+$counter = 1; // Inicializar contador para el ID dinámico
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +17,8 @@ require_once 'paginas/PanelProceso.php';
 
 <div class="top-bar">
     <div class="logo">Bienestar el Salud</div>
+    <button class="menu-toggle" aria-label="Menú">&#9776;</button>
+
     <nav>
         <a href="RegistrarUsuario.php">Registro usuarios</a>
         <a href="RegistrarAdmin.php">Registrar Admin</a>
@@ -23,7 +27,7 @@ require_once 'paginas/PanelProceso.php';
 </div>
 
 <div class="panel-container">
-    <h1>Bienestar el Salud</h1>
+    <h1>Datos de doctores</h1>
     <table>
         <thead>
             <tr>
@@ -39,7 +43,7 @@ require_once 'paginas/PanelProceso.php';
         <tbody>
             <?php while ($row = mysqli_fetch_assoc($result)) : ?>
                 <tr>
-                    <td><?php echo htmlspecialchars($row['id']); ?></td>
+                    <td><?php echo $counter++; ?></td>
                     <td><?php echo htmlspecialchars($row['Nombre']); ?></td>
                     <td><?php echo htmlspecialchars($row['Apellidos']); ?></td>
                     <td><?php echo htmlspecialchars($row['Telefono']); ?></td>
@@ -59,6 +63,15 @@ require_once 'paginas/PanelProceso.php';
 $conn->SetFreeResult($result);
 $conn->CloseConnection();
 ?>
+
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.top-bar nav');
+
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+</script>
 
 </body>
 </html>

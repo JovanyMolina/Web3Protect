@@ -32,5 +32,6 @@ require_once 'Conexion/auth.php';
 -->
         </form>
     </div>
+    <script src="js/ReforsarRegistroAdmin.js"></script>
 </body>
 </html>
