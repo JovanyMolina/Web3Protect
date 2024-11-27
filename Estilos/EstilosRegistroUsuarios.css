@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #2977c0, #d9e4ec);
+    background: linear-gradient(135deg, #5AC8FA, #2CA58D);
     padding: 10px;
 }
 
@@ -19,29 +19,62 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: auto; 
+    height: auto;
     margin-top: 0;
 }
 
 .box {
     background-color: #ffffff;
-    padding: 20px; 
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
-    text-align: center;
+    text-align: left; 
 }
 
-.box input {
-    width: 100%; 
-    padding: 12px;
-    margin-top: 5px;
-    margin-bottom: 15px;
+.input-container {
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    align-items: center; 
+}
+
+.input-container label {
+    font-size: 14px;
+    margin-right: 10px; 
+    color: #333;
+    white-space: nowrap; 
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center; 
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 12px 40px 12px 12px; 
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
     transition: border-color 0.3s;
+}
+
+.input-wrapper input:focus {
+    border-color: #2977c0;
+    outline: none;
+    box-shadow: 0 0 8px rgba(41, 119, 192, 0.4);
+}
+
+.input-wrapper i {
+    position: absolute;
+    right: 10px;
+    color: #aaa;
+    font-size: 18px;
+    pointer-events: none; 
 }
 
 #registrar {
@@ -60,13 +93,6 @@ body {
 #registrar:hover {
     background-color: #1a5a8a;
     transform: scale(1.05);
-}
-
-.formu label {
-    display: block;
-    font-size: 14px;
-    margin-top: 10px;
-    text-align: left;
 }
 
 @media (max-width: 768px) {

@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
     box-sizing: border-box;
 }
 
@@ -9,146 +10,114 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #2977c0, #d9e4ec);
-    color: #3c1ccd;
-    overflow: hidden;
-}
-
-form {
-    background: #ffffff;
-    padding: 20px 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    width: 100%;  /* Cambiar el ancho a 100% para que sea flexible */
-    max-width: 400px;  /* Máximo ancho de 400px */
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-form:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.3);
-}
-
-.titulo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.titulo h2 {
-    font-size: 24px;
-    color: #2977c0;
-    margin: 0;
-}
-
-.titulo i {
-    font-size: 28px;
-    color: #2977c0;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-form label {
-    display: block;
-    margin-top: 10px;
-    font-size: 14px;
-    text-align: left;
-    color: #3c1ccd;
-}
-
-form input[type="text"] {
-    width: 100%;
+    background: linear-gradient(135deg, #5AC8FA, #2CA58D);
     padding: 10px;
-    margin-top: 5px;
+}
+
+.formu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+}
+
+.box {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: left; 
+}
+
+.input-container {
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    align-items: center; 
+}
+
+.input-container label {
+    font-size: 14px;
+    margin-right: 10px;
+    color: #333;
+    white-space: nowrap; 
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center; 
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 12px 40px 12px 12px; 
     border: 1px solid #ddd;
     border-radius: 5px;
-    font-size: 14px;
-    color: #333;
+    font-size: 16px;
+    transition: border-color 0.3s;
 }
 
-form input[type="text"]:focus {
+.input-wrapper input:focus {
     border-color: #2977c0;
     outline: none;
-    box-shadow: 0 0 5px rgba(41, 119, 192, 0.5);
+    box-shadow: 0 0 8px rgba(41, 119, 192, 0.4);
 }
 
-form button {
+.input-wrapper i {
+    position: absolute;
+    right: 10px; 
+    color: #aaa;
+    font-size: 18px;
+    pointer-events: none; 
+}
+
+button {
+    width: 100%;
+    padding: 15px;
     margin-top: 20px;
-    background: #c55d28;
-    color: #f7f1f1;
+    background-color: #2977c0;
+    color: white;
     border: none;
     border-radius: 5px;
-    padding: 10px 15px;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-form button:hover {
-    background: #59f536;
-    transform: translateY(-3px);
+button:hover {
+    background-color: #1a5a8a;
+    transform: scale(1.05);
 }
 
-form button:active {
-    transform: translateY(1px);
-}
-
-/* Media Queries para pantallas más pequeñas */
 @media (max-width: 768px) {
-    .titulo h2 {
-        font-size: 20px;
+    .box {
+        padding: 15px;
+        font-size: 14px; 
     }
 
-    .titulo i {
-        font-size: 24px;
-    }
-
-    form {
-        width: 90%;
-        max-width: 350px;
-    }
-
-    form label {
-        font-size: 12px;
-    }
-
-    form input[type="text"] {
-        font-size: 12px;
-    }
-
-    form button {
-        padding: 8px 12px;
-        font-size: 14px;
+    button {
+        font-size: 16px; 
     }
 }
 
 @media (max-width: 480px) {
-    .titulo h2 {
-        font-size: 18px;
+    .box {
+        padding: 10px; 
     }
 
-    .titulo i {
-        font-size: 22px;
+    .box input {
+        font-size: 14px; 
+        padding: 10px; 
     }
 
-    form {
-        width: 95%;
-        max-width: 300px;
-    }
-
-    form label {
-        font-size: 12px;
-    }
-
-    form input[type="text"] {
-        font-size: 12px;
-    }
-
-    form button {
-        padding: 8px 10px;
-        font-size: 14px;
+    button {
+        font-size: 14px; 
+        padding: 12px; 
     }
 }
