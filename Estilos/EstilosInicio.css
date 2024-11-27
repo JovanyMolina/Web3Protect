@@ -1,0 +1,558 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+body.loaded {
+    opacity: 1;
+}
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #26a69a;
+    padding: 10px 20px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; /* Mantén el navbar en su posición */
+    z-index: 10; /* Asegúrate de que el navbar está por delante */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeInLogo 2s ease-in-out;
+
+}
+.logo-img {
+    height: 70px; 
+    max-width: 100%; 
+    object-fit: contain;
+    border-radius: 50%; 
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    position: relative;
+}
+
+.nav-links li {
+    padding: 5px 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+
+}
+
+.nav-links a:hover {
+    background-color: #f57c00; 
+}
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none; /* Esconde el menú hamburguesa en pantallas grandes */
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 20; /* Asegúrate de que esté por delante */
+}
+@keyframes fadeInLogo {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.menu-toggle .bar {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.foto-section {
+    position: relative;
+    z-index: 1; /* Asegúrate de que la imagen está detrás del navbar */
+    height: 400px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('img/portada.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.foto-container {
+    width: 100%;
+    height: 100%;
+}
+
+.foto-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* Quién Somos */
+.quien-somos {
+    padding: 60px 20px;
+    background-color: #f7f7f7; /* Fondo gris claro */
+    text-align: center;
+}
+.quien-somos .content {
+    max-width: 800px; /* Limita el ancho del texto para mejor legibilidad */
+    margin: 0 auto; /* Centra horizontalmente */
+    text-align: justify; /* Justifica el texto */
+}
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+    
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.quien-somos h2 {
+    font-size: 2.5rem;
+    color: #26a69a; /* Verde azulado */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.card, .emergency-card {
+    background-color: #fff; /* Blanco */
+    border: 2px solid #26a69a; /* Verde Azulado */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.quien-somos p {
+    font-size: 1.1rem;
+    color: #333; /* Texto oscuro */
+    line-height: 1.8; /* Mejora la separación entre líneas */
+    margin-bottom: 20px;
+}
+.quien-somos p:last-child {
+    margin-bottom: 0; /* Elimina el margen inferior del último párrafo */
+}
+.services-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+.services-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.card {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+.card:hover, .emergency-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.card-icon img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+.card h3 {
+    color: #f57c00;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+
+.directors-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.directors-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Directors Container */
+.directors-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Director Card Styles */
+.director-card {
+    background-color: #ffffff;
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.director-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.director-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.director-card h3 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.director-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.offer-section {
+    background-color: #ff6f61;
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.offer-banner {
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.offer-banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.offer-banner p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.offer-btn {
+    background-color: #f57c00; /* Naranja vibrante */
+    color: #fff; /* Blanco */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.offer-btn:hover {
+    background-color: #26a69a; /* Verde Azulado */
+    transform: scale(1.1);
+}
+
+.location-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.location-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.location-section p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.map-container {
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+/* Sección de Números de Emergencia */
+.emergency-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.emergency-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #d9534f; /* Rojo suave para destacar */
+}
+
+.emergency-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* Contenedor de las Cards */
+.emergency-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Estilo de las Cards */
+.emergency-card {
+    background-color: #ffffff;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.emergency-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.emergency-card h3 {
+    font-size: 1.5rem;
+    color: #d9534f;
+    margin-bottom: 10px;
+}
+
+.emergency-card p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #26a69a; /* Verde Azulado */
+    color: #fff; /* Blanco */
+    padding: 20px 10px;
+}
+.footer a {
+    color: #fff; /* Blanco */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    flex: 1;
+    text-align: left;
+}
+.footer a:hover {
+    color: #f57c00; 
+}
+
+.footer-logo h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.footer-links, .footer-info, .footer-social {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-links h3, .footer-info h3, .footer-social h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.footer-links ul, .footer-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li, .footer-info li {
+    margin-bottom: 5px;
+}
+
+.footer-links a, .footer-info a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover, .footer-info a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Redes Sociales */
+.footer-social .social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social .social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-social .social-icons a:hover {
+    color: #007bff;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 30px;
+    border-top: 1px solid #555;
+    padding-top: 20px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    background-color: #333; /* Fondo oscuro */
+    position: absolute;
+    top: 60px; /* Debajo del navbar */
+    right: 20px;
+    width: 200px;
+    border-radius: 8px;
+    z-index: 20; /* Asegúrate de que esté por delante */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);}
+
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    .navbar {
+        flex-direction: column;
+    }
+    .nav-links {
+        display: none; /* Esconde el menú horizontal */
+
+    }
+    .director-card, .emergency-card {
+        width: 100%;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 10px 0;
+    }
+    .card {
+        width: 100%;
+    }
+    .director-card {
+        width: 100%;
+    }
+
+    .offer-banner h2 {
+        font-size: 2rem;
+    }
+
+    .offer-banner p {
+        font-size: 1rem;
+    }
+
+    .offer-btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .emergency-card {
+        width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links, .footer-info, .footer-social {
+        text-align: center;
+    }
+}
+
+

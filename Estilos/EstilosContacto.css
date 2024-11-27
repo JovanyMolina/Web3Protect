@@ -1,0 +1,196 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #26a69a; 
+    padding: 10px 20px;
+    color: #fff; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+.nav-links li {
+    padding: 5px 0;
+}
+
+.nav-links a {
+    color: #fff; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.nav-links a:hover {
+    color: #f57c00; /* Naranja vibrante */
+}
+.nav-links a:hover, .nav-links a.active {
+    color: #f57c00; /* Naranja vibrante */
+}
+
+/* Form Section */
+.form-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.form-section h2 {
+    font-size: 2.5rem;
+    color: #26a69a;
+    margin-bottom: 20px;
+}
+
+.form-section p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto; /* Centra el formulario en la pantalla */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border: 2px solid #26a69a;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #f57c00; /* Naranja vibrante */
+    box-shadow: 0 0 8px rgba(245, 124, 0, 0.3);
+}
+
+textarea {
+    resize: none;
+}
+
+/* Button */
+.btn {
+    background-color: #f57c00;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #26a69a;
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    background-color: #26a69a;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeInLogo 2s ease-in-out;
+
+}
+.logo-img {
+    height: 70px; 
+    max-width: 100%; 
+    object-fit: contain;
+    border-radius: 50%; 
+}
+
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+    /* Ajuste en el formulario */
+    .form-section {
+        padding: 30px 15px;
+    }
+
+    .form-section h2 {
+        font-size: 2rem;
+    }
+
+    .contact-form {
+        gap: 15px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.9rem; /* Tamaño más pequeño para dispositivos móviles */
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+    .navbar {
+        flex-direction: column; /* Acomoda el logo y enlaces verticalmente */
+    }
+
+    .logo {
+        margin-bottom: 10px; /* Añade espacio entre el logo y los enlaces */
+    }
+
+    .nav-links {
+        justify-content: center; /* Centra los enlaces en pantallas pequeñas */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Ajuste para pantallas pequeñas */
+    .form-section {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .form-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        padding: 8px 12px;
+    }
+}
