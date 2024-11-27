@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
+    background-color: #f8f9fa; /* Gris claro */
     margin: 0;
 }
 
@@ -8,8 +8,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #26a69a; /* Verde azulado */
+    color: #fff; /* Blanco */
     padding: 15px;
     position: fixed;
     width: 100%;
@@ -32,7 +32,7 @@ body {
     margin-right: 20px; 
 }
 .top-bar nav a {
-    color: #fff;
+    color: #fff; /* Blanco */
     text-decoration: none;
     font-size: 16px;
     padding: 5px 10px;
@@ -41,25 +41,38 @@ body {
 }
 
 .top-bar nav a:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: #f57c00; /* Naranja vibrante */
 }
 
 .panel-container {
     margin-top: 140px;
     padding: 20px;
-    background-color: #fff;
+    background-color: #fff; /* Blanco */
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     width: 90%;
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
 }
-
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 h1 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 24px;
+    color: #26a69a; /* Verde azulado */
 }
 
 table {
@@ -75,8 +88,8 @@ th, td {
 }
 
 th {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #26a69a; /* Verde azulado */
+    color: #fff; /* Blanco */
     text-align: center;
 }
 
@@ -90,31 +103,42 @@ td a {
 }
 
 .btn-update {
-    background-color: #28a745;
-    color: #fff;
+    background-color: #26a69a; /* Verde azulado */
+    color: #fff; /* Blanco */
 }
 
 .btn-delete {
-    background-color: #dc3545;
-    color: #fff;
+    background-color: #d9534f; /* Rojo suave */
+    color: #fff; /* Blanco */
+}
+
+.btn-update:hover {
+    background-color: #f57c00; /* Naranja vibrante */
+}
+
+.btn-delete:hover {
+    background-color: #f57c00; /* Naranja vibrante */
+}
+.btn-update, .btn-delete {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-update:hover, .btn-delete:hover {
-    opacity: 0.8;
+    transform: scale(1.1); /* Escala el botón ligeramente */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Agrega una sombra */
 }
 
 .menu-toggle {
     display: none;
     background-color: transparent;
     border: none;
-    color: #fff;
+    color: #fff; /* Blanco */
     font-size: 24px;
     cursor: pointer;
 }
 
-
+/* Responsive Styles */
 @media (max-width: 768px) {
-   
     .panel-container {
         width: 100%;
         padding: 15px;
@@ -126,24 +150,21 @@ td a {
     }
 
     .top-bar nav {
-        display: none; 
+        display: none;
         flex-direction: column;
         width: 100%;
+    }
 
-    }
-    .top-bar nav a {
-        padding: 10px 15px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    }
     .top-bar nav.active {
-        display: flex; 
+        display: flex;
     }
 
     .menu-toggle {
-        display: block; 
+        display: block;
         margin-left: auto;
         margin-right: 62px;
     }
+
     table {
         display: block;
         overflow-x: auto;

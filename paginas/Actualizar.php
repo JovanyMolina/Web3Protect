@@ -29,7 +29,7 @@ if ($result && mysqli_num_rows($result) > 0) {
     <form action="EditarUsuario.php" method="POST" class="box">
         <div class="titulo">
             <h2>Actualizar Usuario</h2>
-            <i class='bx bx-edit-alt'></i>
+          <!--    <i class='bx bx-edit-alt'></i>-->
         </div>
         <input type="hidden" name="id" value="<?php echo isset($row['id']) ? htmlspecialchars($row['id']) : ''; ?>">
 
