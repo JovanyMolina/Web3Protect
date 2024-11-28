@@ -14,7 +14,7 @@ body {
     padding: 10px;
 }
 
-.formu {
+.form-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,9 +22,16 @@ body {
     height: auto;
     margin-top: 0;
 }
+.box h2{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+
+}
 
 .box {
-    background-color:#f5d1d1;
+    background-color: #f5d1d1;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
@@ -46,7 +53,7 @@ body {
     margin-right: 10px;
     white-space: nowrap;
     font-weight: bold;
-    color: #000
+    color: #000;
 }
 
 .input-wrapper {
@@ -66,7 +73,7 @@ body {
 }
 
 .input-wrapper input:focus {
-    border-color: #26a69a; 
+    border-color: #26a69a;
     outline: none;
     box-shadow: 0 0 8px rgba(38, 166, 154, 0.4);
 }
@@ -74,7 +81,7 @@ body {
 .input-wrapper i {
     position: absolute;
     right: 10px;
-    color: #f8cb72; 
+    color: #f8cb72;
     font-size: 18px;
     pointer-events: none;
 }
@@ -82,29 +89,59 @@ body {
 #registrar {
     width: 100%;
     padding: 15px;
-    margin-top: 20px;
-    background-color: #f57c00; 
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); 
     color: white;
-    border: none;
-    border-radius: 5px;
     font-size: 18px;
+    border: none;
+    border-radius: 50px;  
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  
 }
-
-.box h2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    text-align: center;
-    
-}
-
 
 #registrar:hover {
-    background-color: #e65100;
-    transform: scale(1.05);
+    background: linear-gradient(135deg, #feb47b, #ff7e5f); 
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);  
+}
+
+#registrar:active {
+    transform: translateY(1px); 
+}
+
+.regresar-button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    background: linear-gradient(135deg, #26a69a, #00796b); 
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;  
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  
+}
+
+.regresar-button:hover {
+    background: linear-gradient(135deg, #00796b, #26a69a); 
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.regresar-button:active {
+    transform: translateY(1px);
+}
+
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;  
+    width: 100%;
+    margin-top: 20px;
 }
 
 @keyframes slideInFromTop {
@@ -126,6 +163,11 @@ body {
 
     #registrar {
         font-size: 16px;
+    }
+
+    .regresar-button {
+        font-size: 14px;
+        padding: 8px 16px;
     }
 }
 

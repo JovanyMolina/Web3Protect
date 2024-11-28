@@ -14,7 +14,7 @@ require_once 'Conexion/auth.php';
 </head>
 
 <body>
-<div class="formu">
+    <div class="formu">
         <form action="paginas/RegistroUsuaruiosProceso.php" method="POST" class="box">
             <h2>Registro de usuario</h2>
             <div class="input-container">
@@ -57,12 +57,17 @@ require_once 'Conexion/auth.php';
                     <i class="fa fa-graduation-cap"></i>
                 </div>
             </div>
-            <button type="submit" id="registrar">Registrar</button>
+
+            <div class="buttons-container">
+                <button type="button" onclick="window.location.href='panel.php'" class="animate-button regresar-button">
+                    Regresar
+                </button>
+                <button type="submit" id="registrar">Registrar</button>
+            </div>
         </form>
     </div>
 
-
-<sricpt src="js/ReforsarRegistroUsuario.js"></sricpt>
+    <script src="js/ReforsarRegistroUsuario.js"></script>
 </body>
 
 </html>

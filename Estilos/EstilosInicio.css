@@ -10,7 +10,6 @@ body {
 body.loaded {
     opacity: 1;
 }
-/* Navbar Styles */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -19,8 +18,9 @@ body.loaded {
     padding: 10px 20px;
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative; /* Mantén el navbar en su posición */
-    z-index: 10; /* Asegúrate de que el navbar está por delante */
+    position: relative;
+    z-index: 10;
+    font-size: 17px ;
 }
 
 .logo {
@@ -60,12 +60,11 @@ body.loaded {
     background-color: #f57c00; 
 }
 
-/* Mobile Menu */
 .menu-toggle {
-    display: none; /* Esconde el menú hamburguesa en pantallas grandes */
+    display: none; 
     flex-direction: column;
     cursor: pointer;
-    z-index: 20; /* Asegúrate de que esté por delante */
+    z-index: 20;
 }
 @keyframes fadeInLogo {
     0% {
@@ -87,7 +86,7 @@ body.loaded {
 
 .foto-section {
     position: relative;
-    z-index: 1; /* Asegúrate de que la imagen está detrás del navbar */
+    z-index: 1; 
     height: 400px;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
                 url('img/portada.jpg') no-repeat center center/cover;
@@ -109,16 +108,15 @@ body.loaded {
     object-fit: cover; 
 }
 
-/* Quién Somos */
 .quien-somos {
     padding: 60px 20px;
-    background-color: #f7f7f7; /* Fondo gris claro */
+    background-color: #f7f7f7; 
     text-align: center;
 }
 .quien-somos .content {
-    max-width: 800px; /* Limita el ancho del texto para mejor legibilidad */
-    margin: 0 auto; /* Centra horizontalmente */
-    text-align: justify; /* Justifica el texto */
+    max-width: 800px; 
+    margin: 0 auto; 
+    text-align: justify;
 }
 .animate-on-scroll {
     opacity: 0;
@@ -133,24 +131,24 @@ body.loaded {
 }
 .quien-somos h2 {
     font-size: 2.5rem;
-    color: #26a69a; /* Verde azulado */
+    color: #26a69a;
     margin-bottom: 20px;
     font-weight: bold;
 }
 .card, .emergency-card {
-    background-color: #fff; /* Blanco */
-    border: 2px solid #26a69a; /* Verde Azulado */
+    background-color: #fff; 
+    border: 2px solid #26a69a; 
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .quien-somos p {
     font-size: 1.1rem;
-    color: #333; /* Texto oscuro */
-    line-height: 1.8; /* Mejora la separación entre líneas */
+    color: #333; 
+    line-height: 1.8; 
     margin-bottom: 20px;
 }
 .quien-somos p:last-child {
-    margin-bottom: 0; /* Elimina el margen inferior del último párrafo */
+    margin-bottom: 0;
 }
 .services-section {
     padding: 50px 20px;
@@ -214,7 +212,6 @@ body.loaded {
     color: #333;
 }
 
-/* Directors Container */
 .directors-container {
     display: flex;
     flex-wrap: wrap;
@@ -222,7 +219,6 @@ body.loaded {
     gap: 20px;
 }
 
-/* Director Card Styles */
 .director-card {
     background-color: #ffffff;
     width: 250px;
@@ -288,8 +284,8 @@ body.loaded {
 }
 
 .offer-btn {
-    background-color: #f57c00; /* Naranja vibrante */
-    color: #fff; /* Blanco */
+    background-color: #f57c00;
+    color: #fff; 
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -300,7 +296,7 @@ body.loaded {
 }
 
 .offer-btn:hover {
-    background-color: #26a69a; /* Verde Azulado */
+    background-color: #26a69a; 
     transform: scale(1.1);
 }
 
@@ -330,8 +326,6 @@ body.loaded {
     overflow: hidden;
 }
 
-
-/* Sección de Números de Emergencia */
 .emergency-section {
     padding: 50px 20px;
     text-align: center;
@@ -342,7 +336,7 @@ body.loaded {
 .emergency-section h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #d9534f; /* Rojo suave para destacar */
+    color: #d9534f; 
 }
 
 .emergency-section p {
@@ -351,7 +345,6 @@ body.loaded {
     color: #555;
 }
 
-/* Contenedor de las Cards */
 .emergency-container {
     display: flex;
     flex-wrap: wrap;
@@ -359,7 +352,6 @@ body.loaded {
     gap: 20px;
 }
 
-/* Estilo de las Cards */
 .emergency-card {
     background-color: #ffffff;
     width: 300px;
@@ -387,14 +379,13 @@ body.loaded {
     line-height: 1.6;
 }
 
-/* Footer Styles */
 .footer {
-    background-color: #26a69a; /* Verde Azulado */
-    color: #fff; /* Blanco */
+    background-color: #26a69a; 
+    color: #fff; 
     padding: 20px 10px;
 }
 .footer a {
-    color: #fff; /* Blanco */
+    color: #fff; 
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -472,7 +463,6 @@ body.loaded {
     color: #007bff;
 }
 
-/* Footer Bottom */
 .footer-bottom {
     margin-top: 30px;
     border-top: 1px solid #555;
@@ -484,13 +474,13 @@ body.loaded {
 .nav-links.active {
     display: flex;
     flex-direction: column;
-    background-color: #333; /* Fondo oscuro */
+    background-color: #333; 
     position: absolute;
-    top: 60px; /* Debajo del navbar */
+    top: 60px; 
     right: 20px;
     width: 200px;
     border-radius: 8px;
-    z-index: 20; /* Asegúrate de que esté por delante */
+    z-index: 20; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);}
 
 
@@ -502,7 +492,7 @@ body.loaded {
         flex-direction: column;
     }
     .nav-links {
-        display: none; /* Esconde el menú horizontal */
+        display: none; 
 
     }
     .director-card, .emergency-card {

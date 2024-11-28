@@ -15,7 +15,7 @@ body {
 }
 
 .box {
-    background-color:#f5d1d1;
+    background-color: #f5d1d1;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
@@ -31,17 +31,11 @@ body {
     justify-content: center;
     margin-bottom: 20px;
     text-align: center;
-    
 }
 
 .titulo h2 {
     font-size: 24px;
     margin: 0;
-}
-
-.titulo i {
-    font-size: 24px;
-    color: #26a69a;
 }
 
 .input-container {
@@ -75,7 +69,7 @@ body {
 }
 
 .input-wrapper input:focus {
-    border-color: #26a69a; 
+    border-color: #26a69a;
     outline: none;
     box-shadow: 0 0 8px rgba(38, 166, 154, 0.4);
 }
@@ -92,7 +86,7 @@ button {
     width: 100%;
     padding: 15px;
     margin-top: 20px;
-    background-color: #f57c00; 
+    background-color: #f57c00;
     color: white;
     border: none;
     border-radius: 5px;
@@ -102,21 +96,39 @@ button {
 }
 
 button:hover {
-    background-color: #e65100; 
+    background-color: #e65100;
+    transform: scale(1.05);
+}
+
+.regresar-button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    background-color: #26a69a;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.regresar-button:hover {
+    background-color: #00796b;
     transform: scale(1.05);
 }
 
 @keyframes slideInFromTop {
     0% {
         opacity: 0;
-        transform: translateY(-50px); 
+        transform: translateY(-50px);
     }
     100% {
         opacity: 1;
-        transform: translateY(0); 
+        transform: translateY(0);
     }
 }
-
 
 @media (max-width: 768px) {
     .box {

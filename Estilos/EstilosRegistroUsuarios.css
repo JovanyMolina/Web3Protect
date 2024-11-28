@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #26a69a, #007bff); 
+    background: linear-gradient(135deg, #26a69a, #007bff);
     padding: 10px;
 }
 
@@ -40,12 +40,14 @@ body {
     display: flex;
     align-items: center;
 }
+
 .input-container label {
     font-size: 14px;
     margin-right: 10px;
     color: #01011c;
     white-space: nowrap;
 }
+
 .input-wrapper {
     position: relative;
     width: 100%;
@@ -63,7 +65,7 @@ body {
 }
 
 .input-wrapper input:focus {
-    border-color: #26a69a; /* Verde azulado */
+    border-color: #26a69a;
     outline: none;
     box-shadow: 0 0 8px rgba(38, 166, 154, 0.4);
 }
@@ -77,9 +79,7 @@ body {
 }
 
 #registrar {
-    width: 100%;
     padding: 15px;
-    margin-top: 20px;
     background-color: #f57c00; 
     color: white;
     border: none;
@@ -95,9 +95,46 @@ body {
     justify-content: center;
     margin-bottom: 20px;
     text-align: center;
-    
 }
 
+#registrar:hover {
+    background-color: #e65100;
+    transform: scale(1.05);
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;  
+    margin-top: 20px;
+    gap: 10px; 
+}
+
+.regresar-button,
+#registrar {
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    flex: 1; 
+}
+
+.regresar-button {
+    background-color: #26a69a; 
+    color: white;
+}
+
+
+.regresar-button:hover {
+    background-color: #00796b;
+    transform: scale(1.05);
+}
+
+#registrar {
+    background-color: #f57c00; 
+    color: white;
+}
 
 #registrar:hover {
     background-color: #e65100;
@@ -111,7 +148,7 @@ body {
     }
     100% {
         opacity: 1;
-        transform: translateY(0); 
+        transform: translateY(0);
     }
 }
 

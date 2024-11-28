@@ -150,6 +150,26 @@ h2.animate-title {
     animation: inputFocus 0.3s ease-out;
 }
 
+.regresar-button {
+    background-color: #f44336; 
+    margin-top: 10px;  
+}
+
+.regresar-button:hover {
+    background-color: #e53935; 
+    transform: scale(1.05);
+
+}
+button:hover {
+    background-color: #4caf50;
+    transform: scale(1.05);
+}
+.button-group {
+    display: flex;
+    justify-content: space-between; 
+    gap: 10px; 
+    margin-top: 20px;
+}
 @keyframes inputFocus {
     0% {
         transform: scale(1);
@@ -160,7 +180,7 @@ h2.animate-title {
 }
 
 button {
-    width: 100%;
+    width: 48%;
     padding: 12px;
     font-size: 16px;
     color: #ffffff;

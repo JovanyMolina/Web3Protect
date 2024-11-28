@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión - Hospital</title>
+    <link rel="stylesheet" href="Estilos/EstilosIndex.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="login-container">
+        <div class="logo">
+            <img src="img/logo.png" alt="Hospital Logo" class="hospital-logo">
+        </div>
+        <form action="paginas/IndexProceso.php" method="POST" class="login-box">
+            <h2 class="animate-title">Bienvenido</h2>
+            <p class="login-description">Acceso exclusivo para personal médico y administrativo.</p>
+            <label for="usuario"><strong>Usuario</strong></label>
+            <div class="input-icon">
+                <input type="text" name="usuario" id="usuario" required class="animate-input">
+            </div>
+            <label for="contrasena"><strong>Contraseña</strong></label>
+            <div class="input-icon">
+                <input type="password" name="contrasena" id="contrasena" required class="animate-input">
+            </div>
+            <button type="button" onclick="window.location.href='index.html'" class="animate-button regresar-button">Regresar </button>
+
+            <button type="submit" class="animate-button">Iniciar Sesión</button>
+        </form>
+    </div>
+</body>
+</html>

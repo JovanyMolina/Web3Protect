@@ -29,11 +29,10 @@ if ($result && mysqli_num_rows($result) > 0) {
     <form action="EditarUsuario.php" method="POST" class="box">
         <div class="titulo">
             <h2>Actualizar Usuario</h2>
-          <!--    <i class='bx bx-edit-alt'></i>-->
         </div>
+
         <input type="hidden" name="id" value="<?php echo isset($row['id']) ? htmlspecialchars($row['id']) : ''; ?>">
 
-        <!-- Campos de entrada con íconos -->
         <div class="input-container">
             <label for="Nombre"><strong>Nombre:</strong></label>
             <div class="input-wrapper">
@@ -79,7 +78,10 @@ if ($result && mysqli_num_rows($result) > 0) {
             </div>
         </div>
 
+        <div class="button-container">
+        <button type="button" class="regresar-button" onclick="window.location.href='../panel.php'">Regresar al Panel</button>
         <button type="submit">Actualizar</button>
+        </div>
     </form>
 </body>
 </html>

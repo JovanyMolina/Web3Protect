@@ -1,4 +1,3 @@
-/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f7f7f7;
@@ -7,7 +6,6 @@ body {
     padding: 0;
 }
 
-/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -16,8 +14,10 @@ body {
     padding: 10px 20px;
     color: #fff; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 17px ;
 }
 .nav-links {
+    list-style: none;
     list-style: none;
     display: flex;
     gap: 15px;
@@ -32,13 +32,22 @@ body {
     transition: color 0.3s ease;
 }
 .nav-links a:hover {
-    color: #f57c00; /* Naranja vibrante */
+    color: #f57c00; 
 }
 .nav-links a:hover, .nav-links a.active {
-    color: #f57c00; /* Naranja vibrante */
+    color: #f57c00; 
 }
 
-/* Form Section */
+.footer-links ul, li{
+    text-decoration: none;
+}
+.footer-links ul,
+.footer-links li {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
 .form-section {
     padding: 50px 20px;
     text-align: center;
@@ -60,13 +69,12 @@ body {
     margin-bottom: 30px;
 }
 
-/* Contact Form */
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 20px;
     max-width: 600px;
-    margin: 0 auto; /* Centra el formulario en la pantalla */
+    margin: 0 auto; 
 }
 
 .form-group {
@@ -93,7 +101,7 @@ body {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #f57c00; /* Naranja vibrante */
+    border-color: #f57c00; 
     box-shadow: 0 0 8px rgba(245, 124, 0, 0.3);
 }
 
@@ -101,7 +109,6 @@ textarea {
     resize: none;
 }
 
-/* Button */
 .btn {
     background-color: #f57c00;
     color: #fff;
@@ -118,7 +125,6 @@ textarea {
     transform: scale(1.05);
 }
 
-/* Footer */
 .footer {
     background-color: #26a69a;
     color: #fff;
@@ -141,9 +147,7 @@ textarea {
 }
 
 
-/* Responsividad */
 @media screen and (max-width: 768px) {
-    /* Ajuste en el formulario */
     .form-section {
         padding: 30px 15px;
     }
@@ -158,7 +162,7 @@ textarea {
 
     .form-group input,
     .form-group textarea {
-        font-size: 0.9rem; /* Tamaño más pequeño para dispositivos móviles */
+        font-size: 0.9rem; 
     }
 
     .btn {
@@ -166,20 +170,20 @@ textarea {
         padding: 10px 15px;
     }
     .navbar {
-        flex-direction: column; /* Acomoda el logo y enlaces verticalmente */
+        flex-direction: column; 
     }
 
     .logo {
-        margin-bottom: 10px; /* Añade espacio entre el logo y los enlaces */
+        margin-bottom: 10px; 
     }
 
     .nav-links {
-        justify-content: center; /* Centra los enlaces en pantallas pequeñas */
+        justify-content: center; 
     }
 }
 
 @media screen and (max-width: 480px) {
-    /* Ajuste para pantallas pequeñas */
+   
     .form-section {
         margin: 20px;
         padding: 20px;

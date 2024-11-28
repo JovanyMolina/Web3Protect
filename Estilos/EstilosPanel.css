@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa; /* Gris claro */
+    background-color: #f8f9fa;
     margin: 0;
 }
 
@@ -8,8 +8,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #26a69a; /* Verde azulado */
-    color: #fff; /* Blanco */
+    background-color: #26a69a; 
+    color: #fff; 
     padding: 15px;
     position: fixed;
     width: 100%;
@@ -32,7 +32,7 @@ body {
     margin-right: 20px; 
 }
 .top-bar nav a {
-    color: #fff; /* Blanco */
+    color: #fff; 
     text-decoration: none;
     font-size: 16px;
     padding: 5px 10px;
@@ -41,13 +41,13 @@ body {
 }
 
 .top-bar nav a:hover {
-    background: #f57c00; /* Naranja vibrante */
+    background: #f57c00; 
 }
 
 .panel-container {
     margin-top: 140px;
     padding: 20px;
-    background-color: #fff; /* Blanco */
+    background-color: #fff; 
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     width: 90%;
@@ -72,7 +72,7 @@ h1 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 24px;
-    color: #26a69a; /* Verde azulado */
+    color: #26a69a; 
 }
 
 table {
@@ -88,8 +88,8 @@ th, td {
 }
 
 th {
-    background-color: #26a69a; /* Verde azulado */
-    color: #fff; /* Blanco */
+    background-color: #26a69a; 
+    color: #fff; 
     text-align: center;
 }
 
@@ -103,41 +103,40 @@ td a {
 }
 
 .btn-update {
-    background-color: #26a69a; /* Verde azulado */
-    color: #fff; /* Blanco */
+    background-color: #26a69a; 
+    color: #fff; 
 }
 
 .btn-delete {
-    background-color: #d9534f; /* Rojo suave */
-    color: #fff; /* Blanco */
+    background-color: #d9534f; 
+    color: #fff; 
 }
 
 .btn-update:hover {
-    background-color: #f57c00; /* Naranja vibrante */
+    background-color: #f57c00; 
 }
 
 .btn-delete:hover {
-    background-color: #f57c00; /* Naranja vibrante */
+    background-color: #f57c00; 
 }
 .btn-update, .btn-delete {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-update:hover, .btn-delete:hover {
-    transform: scale(1.1); /* Escala el botón ligeramente */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Agrega una sombra */
+    transform: scale(1.1); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
 }
 
 .menu-toggle {
     display: none;
     background-color: transparent;
     border: none;
-    color: #fff; /* Blanco */
+    color: #fff;
     font-size: 24px;
     cursor: pointer;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     .panel-container {
         width: 100%;
