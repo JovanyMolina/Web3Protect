@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f2f5;
+    background-color: #09172c;
 }
 
 .login-container {
@@ -50,7 +50,7 @@ h2 {
 .login-box label {
     display: block;
     font-size: 14px;
-    color: #000000;
+    color: #090909;
     margin-top: 10px;
     text-align: left;
     font-weight: bold;
