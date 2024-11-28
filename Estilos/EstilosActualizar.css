@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #26a69a, #007bff); /* Verde azulado a azul */
+    background: linear-gradient(135deg, #26a69a, #007bff); 
     padding: 10px;
 }
 
@@ -75,7 +75,7 @@ body {
 }
 
 .input-wrapper input:focus {
-    border-color: #26a69a; /* Verde azulado */
+    border-color: #26a69a; 
     outline: none;
     box-shadow: 0 0 8px rgba(38, 166, 154, 0.4);
 }
@@ -92,7 +92,7 @@ button {
     width: 100%;
     padding: 15px;
     margin-top: 20px;
-    background-color: #f57c00; /* Naranja vibrante */
+    background-color: #f57c00; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -102,18 +102,18 @@ button {
 }
 
 button:hover {
-    background-color: #e65100; /* Naranja más oscuro */
+    background-color: #e65100; 
     transform: scale(1.05);
 }
 
 @keyframes slideInFromTop {
     0% {
         opacity: 0;
-        transform: translateY(-50px); /* Empieza desde arriba */
+        transform: translateY(-50px); 
     }
     100% {
         opacity: 1;
-        transform: translateY(0); /* Termina en su posición original */
+        transform: translateY(0); 
     }
 }
 

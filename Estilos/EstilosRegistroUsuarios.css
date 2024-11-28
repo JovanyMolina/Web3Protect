@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #26a69a, #007bff); /* Cambiado a verde azulado y azul */
+    background: linear-gradient(135deg, #26a69a, #007bff); 
     padding: 10px;
 }
 
@@ -40,14 +40,12 @@ body {
     display: flex;
     align-items: center;
 }
-
 .input-container label {
     font-size: 14px;
     margin-right: 10px;
-    color: #333; /* Color oscuro */
+    color: #01011c;
     white-space: nowrap;
 }
-
 .input-wrapper {
     position: relative;
     width: 100%;
@@ -82,7 +80,7 @@ body {
     width: 100%;
     padding: 15px;
     margin-top: 20px;
-    background-color: #f57c00; /* Naranja vibrante */
+    background-color: #f57c00; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -102,18 +100,18 @@ body {
 
 
 #registrar:hover {
-    background-color: #e65100; /* Naranja más oscuro */
+    background-color: #e65100;
     transform: scale(1.05);
 }
 
 @keyframes slideInFromTop {
     0% {
         opacity: 0;
-        transform: translateY(-50px); /* Empieza desde arriba */
+        transform: translateY(-50px);
     }
     100% {
         opacity: 1;
-        transform: translateY(0); /* Termina en su posición original */
+        transform: translateY(0); 
     }
 }
 

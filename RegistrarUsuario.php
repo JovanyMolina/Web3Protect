@@ -18,7 +18,7 @@ require_once 'Conexion/auth.php';
         <form action="paginas/RegistroUsuaruiosProceso.php" method="POST" class="box">
             <h2>Registro de usuario</h2>
             <div class="input-container">
-                <label for="nombre">Nombre:</label>
+                <label for="nombre"><strong>Nombre:</strong></label>
                 <div class="input-wrapper">
                     <input type="text" id="nombre" name="nombre" required minlength="2" maxlength="50"
                         pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+" title="Solo se permiten letras y espacios.">
@@ -26,7 +26,7 @@ require_once 'Conexion/auth.php';
                 </div>
             </div>
             <div class="input-container">
-                <label for="apellido">Apellido:</label>
+                <label for="apellido"><strong>Apellido:</strong></label>
                 <div class="input-wrapper">
                     <input type="text" id="apellido" name="apellido" required minlength="2" maxlength="50"
                         pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+" title="Solo se permiten letras y espacios.">
@@ -34,7 +34,7 @@ require_once 'Conexion/auth.php';
                 </div>
             </div>
             <div class="input-container">
-                <label for="telefono">Teléfono:</label>
+                <h5 for="telefono"><strong>Teléfono:</strong></h5>
                 <div class="input-wrapper">
                     <input type="text" id="telefono" name="telefono" required pattern="[0-9]{10}" maxlength="10"
                         title="Debe contener exactamente 10 números.">
@@ -42,7 +42,7 @@ require_once 'Conexion/auth.php';
                 </div>
             </div>
             <div class="input-container">
-                <label for="cedulaProfesional">Cédula Profesional:</label>
+                <label for="cedulaProfesional"><strong>Cédula Profesional:</strong></label>
                 <div class="input-wrapper">
                     <input type="text" id="cedulaProfesional" name="cedulaProfesional" required maxlength="8"
                         pattern="[0-9]{7,10}" title="Debe contener entre 7 y 8 dígitos numéricos.">
@@ -50,7 +50,7 @@ require_once 'Conexion/auth.php';
                 </div>
             </div>
             <div class="input-container">
-                <label for="maestria">Maestría:</label>
+                <label for="maestria"><strong>Maestría:</strong></label>
                 <div class="input-wrapper">
                     <input type="text" id="maestria" name="maestria" required minlength="3" maxlength="50"
                         title="Ingrese un nombre válido de maestría.">

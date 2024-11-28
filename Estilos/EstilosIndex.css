@@ -50,9 +50,10 @@ h2 {
 .login-box label {
     display: block;
     font-size: 14px;
-    color: #555;
+    color: #000000;
     margin-top: 10px;
     text-align: left;
+    font-weight: bold;
 }
 
 .login-box input {

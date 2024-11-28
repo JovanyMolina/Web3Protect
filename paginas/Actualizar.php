@@ -35,7 +35,7 @@ if ($result && mysqli_num_rows($result) > 0) {
 
         <!-- Campos de entrada con íconos -->
         <div class="input-container">
-            <label for="Nombre">Nombre:</label>
+            <label for="Nombre"><strong>Nombre:</strong></label>
             <div class="input-wrapper">
                 <input type="text" id="Nombre" name="Nombre" value="<?php echo isset($row['Nombre']) ? htmlspecialchars($row['Nombre']) : ''; ?>" required minlength="2"
                 maxlength="50" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+" title="Solo se permiten letras y espacios.">
@@ -44,7 +44,7 @@ if ($result && mysqli_num_rows($result) > 0) {
         </div>
 
         <div class="input-container">
-            <label for="Apellidos">Apellidos:</label>
+            <label for="Apellidos"><strong>Apellidos:</strong></label>
             <div class="input-wrapper">
                 <input type="text" id="Apellidos" name="Apellidos" value="<?php echo isset($row['Apellidos']) ? htmlspecialchars($row['Apellidos']) : ''; ?>" required minlength="2"
                 maxlength="50" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+" title="Solo se permiten letras y espacios.">
@@ -53,7 +53,7 @@ if ($result && mysqli_num_rows($result) > 0) {
         </div>
 
         <div class="input-container">
-            <label for="Telefono">Teléfono:</label>
+            <label for="Telefono"><strong>Teléfono:</strong></label>
             <div class="input-wrapper">
                 <input type="text" id="Telefono" name="Telefono" value="<?php echo isset($row['Telefono']) ? htmlspecialchars($row['Telefono']) : ''; ?>" required pattern="[0-9]{10}"
                 maxlength="10" title="Debe contener exactamente 10 números.">
@@ -62,7 +62,7 @@ if ($result && mysqli_num_rows($result) > 0) {
         </div>
 
         <div class="input-container">
-            <label for="CedulaProf">Cédula Profesional:</label>
+            <label for="CedulaProf"><strong>Cédula Profecional:</strong></label>
             <div class="input-wrapper">
                 <input type="text" id="CedulaProf" name="CedulaProf" value="<?php echo isset($row['CedulaProf']) ? htmlspecialchars($row['CedulaProf']) : ''; ?>" required maxlength="8"
                 pattern="[0-9]{7,10}" title="Debe contener entre 7 y 8 dígitos numéricos.">
@@ -71,7 +71,7 @@ if ($result && mysqli_num_rows($result) > 0) {
         </div>
 
         <div class="input-container">
-            <label for="Maestria">Maestría:</label>
+            <label for="Maestria"><strong>Maestría:</strong></label>
             <div class="input-wrapper">
                 <input type="text" id="Maestria" name="Maestría" value="<?php echo isset($row['Maestría']) ? htmlspecialchars($row['Maestría']) : ''; ?>" required minlength="3"
                 maxlength="50" title="Ingrese un nombre válido de maestría.">

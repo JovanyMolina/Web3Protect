@@ -2,7 +2,7 @@
 require_once 'Conexion/auth.php';
 require_once 'paginas/PanelProceso.php';
 
-$counter = 1; // Inicializar contador para el ID dinámico
+$counter = 1; 
 ?>
 
 <!DOCTYPE html>
