@@ -137,6 +137,21 @@ td a {
     cursor: pointer;
 }
 
+.btn-export {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.btn-export:hover {
+    background-color: #45a049;
+}
+
+
+
 @media (max-width: 768px) {
     .panel-container {
         width: 100%;
